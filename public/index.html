@@ -1,483 +1,90 @@
-<!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
-<html lang="en" style="height: auto;">
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-sScale=1">
-  <title>Information</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in</title>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="dist/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="dist/css/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
-
 </head>
-
-<body class="hold-transition sidebar-mini layout-nabar-fixed" style="height: auto;">
-  <div class="wrapper">
-
-    <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-light-pink">
-      <!-- Left navbar links -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-          <a href="index.html" class="nav-link">Home</a>
-        </li>
-      </ul>
-
-      <!-- Right navbar links -->
-      <ul class="navbar-nav ml-auto">
-        
-        <!-- Notifications Dropdown Menu -->
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-            <i class="fas fa-th-large"></i>
-          </a>
-        </li>
-      </ul>
-      <a href="login.html" class="nav-link">Log out</a>
-    </nav>
-    <!-- /.navbar -->
-
-    <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-light-pink elevation-4 ">
-      <!-- Brand Logo -->
-      <a href="index.html" class="brand-link">
-        <img src="information.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light"><b>Information</b></a></span>
-      </a>
-
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <!-- Sidebar user panel (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-          <div class="image">
-            <img src="profile.jpg" class=".img-responsive elevation-2" alt="User Image">
-          </div>
-          <div class="info">
-            <a href="index.html" class="d-block">Wachirapong Khantaworn</a>
-          </div>
-        </div>
-
-        <!-- SidebarSearch Form -->
-        <div class="form-inline">
-          <div class="input-group" data-widget="sidebar-search">
-            <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+<body class="hold-transition login-page">
+  <div class="login-box">
+    <div class="login-logo">
+      <a href="#"><b>Admin</b></a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="card">
+      <div class="card-body login-card-body">
+        <p class="login-box-msg">Sign in to start your session</p>
+        <form action="home.html" method="GET">
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Email">
             <div class="input-group-append">
-              <button class="btn btn-sidebar">
-                <i class="fas fa-search fa-fw"></i>
-              </button>
+              <div class="input-group-text">
+                <span class="fas fa-envelope"></span>
+              </div>
             </div>
           </div>
-        </div>
-
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-            <li class="nav-item menu-open">
-              <a href="index.html" class="nav-link active">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                  Menu
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="educational&contacts_me.html" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Educational & Contacts Me</p>
-                  </a>
-                  <a href="gpa.html" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>GPA</p>
-                  </a>
-                  <a href="daily_routine.html" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Daily routine</p>
-                  </a>
-                  <a href="social_media.html" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Social media</p>  
-                  </a>                  
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <!-- /.sidebar-menu -->
-      </div>
-      <!-- /.sidebar -->
-    </aside>
-
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <div class="content-header">
-        <div class="container-fluid">
-          <div class="row mb-2">
-            <div class="col-sm-6">
-              <h1 class="m-0 text-deeppink">My Information</h1>
-            </div><!-- /.col -->
-            <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">Information</li>
-              </ol>
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-      </div>
-      <!-- /.content-header -->
-
-      <!-- Main content -->
-      <div class="content">
-        <div class="container-fluid">
-          <!-- timeline ประวัติการศึกษา -->
-          <!-- Content Wrapper. Contains page content -->
-          <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-              <div class="container-fluid">
-                <div class="row mb-2">
-                  <div class="col-sm-6">
-                    <h1>Educational & Contacts Me</h1>
-                  </div>                  
-                </div>
-              </div><!-- /.container-fluid -->
-            </section>
-            <!-- Timelime example  -->
-            <div class="row">
-              <div class="col-md-12">
-
-                <!-- The time line -->
-                <div class="timeline">
-
-                  <!-- timeline time label -->
-                  <div class="time-label">
-                    <span class="bg-red">2006-2011</span>
-                  </div>
-                  <!-- /.timeline-label -->
-
-                  <!-- timeline item -->
-                  <div>
-                    <i class="fas fa-user-graduate"></i>
-                    <div class="timeline-item">
-                      <span class="time"><i class="fas fa-check-circle"></i></span>
-                      <h3 class="timeline-header"><a>Banhindadratbamrung School</a></h3>
-                    </div>
-                  </div>
-                  <!-- END timeline item -->
-
-                  <!-- timeline time label -->
-                  <div class="time-label">
-                    <span class="bg-red">2012-2017</span>
-                  </div>
-                  <!-- /.timeline-label -->
-
-                  <!-- timeline item -->
-                  <div>
-                    <i class="fas fa-user-graduate"></i>
-                    <div class="timeline-item">
-                      <span class="time"><i class="fas fa-check-circle"></i></span>
-                      <h3 class="timeline-header"><a>Pangsilathongsuksa School</a></h3>
-                    </div>
-                  </div>
-                  <!-- END timeline item -->
-
-                  <!-- timeline time label -->
-                  <div class="time-label">
-                    <span class="bg-red">2018-2020</span>
-                  </div>
-                  <!-- /.timeline-label -->
-
-                  <!-- timeline item -->
-                  <div>
-                    <i class="fas fa-user-graduate"></i>
-                    <div class="timeline-item">
-                      <span class="time"><i class="fas fa-clock"></i></span>
-                      <h3 class="timeline-header"><a>Maejo University</a></h3>
-                    </div>
-                  </div>
-                  <!-- END timeline item -->
-
-                  <!-- Main content -->
-                  <section class="content">
-
-                    <!-- Default box -->
-                    <div class="card card-solid">
-                      <div class="card-body pb-0">
-                        <div class="row d-flex align-items-stretch">
-                          <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-                            <div class="card bg-light">
-                              <div class="card-header text-muted border-bottom-0">
-                                Contacts Me
-                              </div>
-                              <div class="card-body pt-0">
-                                <div class="row">
-                                  <div class="col-7">
-                                    <h2 class="lead"><b>Wachirapong Khantaworn</b></h2>
-                                    <p class="text-muted text-sm"><b>About: </b>Study in Computer-Science at Maejo
-                                      University.</p>
-                                    <ul class="ml-4 mb-0 fa-ul text-muted">
-                                      <li class="small"><span class="fa-li"><i class="fas fa-house-user"></i></span>
-                                        <b>address :</b> 83 Village No.13 Hindad Sub-district, Pangsilathong District, Kamphaeng Phet, 62120</li>
-                                      <li class="small"><span class="fa-li"><i class="fas fa-mobile-alt"></i></span>
-                                        <b>Phone :</b> +66932963771</li>
-                                    </ul>
-                                  </div>
-                                  <div class="col-5 text-center">
-                                    <img src="Profile.jpg" alt="user-avatar" class="img-circle img-fluid">
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="card-footer">
-                                <div class="text-right">
-                                  <a href="https://m.me/sack.wachirapong" class="btn btn-sm bg-teal">
-                                    <i class="fas fa-comments"></i>
-                                  </a>
-                                  <a href="https://www.facebook.com/sack.wachirapong/" class="btn btn-sm btn-primary">
-                                    <i class="fas fa-user"></i> View Profile Facebook
-                                  </a>
-                                </div>
-                              </div>
-
-                            </div>
-                          </div>
-                          <!-- /.card -->
-                  </section>
-                  <!-- /.content -->
-
-                </div>
-              </div>
-              <!-- /.col -->
-            </div>
-
-
-          </div><!-- /.container-fluid -->
-          <!-- กราฟ gpa ทุกเทอม -->
-          <!-- LINE CHART -->
-          <div class="card card-info">
-            <div class="card-header">
-              <h3 class="card-title">Grade Point Average : GPA</h3>
-
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                  <i class="fas fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove"></button>
-                  <i class="fas fa-times"></i>
-                </button>
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" placeholder="Password">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
               </div>
             </div>
-            <div class="card-body">
-              <div class="chart">
-                <canvas id="lineChart"
-                  style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-              </div>
-            </div>
-            <!-- /.card-body -->
           </div>
-          <!-- /.card -->
-
-          <!-- กราฟ skill ความสามารถในด้านต่างๆ -->
-          <!-- DONUT CHART -->
-          <div class="card card-danger">
-            <div class="card-header">
-              <h3 class="card-title">Daily Routine</h3>
-
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                  <i class="fas fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove">
-                  <i class="fas fa-times"></i>
-                </button>
+          <div class="row">
+            <div class="col-8">
+              <div class="icheck-primary">
+                <input type="checkbox" id="remember">
+                <label for="remember">
+                  Remember Me
+                </label>
               </div>
             </div>
-            <div class="card-body">
-              <canvas id="donutChart"
-                style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+            <!-- /.col -->
+            
+            <div class="col-4">
+              <button type="submit" class="btn btn-primary btn-block">Sign In</button>
             </div>
-
-             <!-- PIE CHART -->
-             <div class="card card-lime">
-              <div class="card-header">
-                <h3 class="card-title">Social media</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="card-body">
-                <canvas id="pieChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
-
           
+            <!-- /.col -->
+          </div>
+        </form>
+        <div class="social-auth-links text-center mb-3">
+          <p>- OR -</p>
+          <a href="home.html" class="btn btn-block btn-primary">
+            <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+          </a>
+          <a href="home.html" class="btn btn-block btn-danger">
+            <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+          </a>  
         </div>
-        <!-- /.content -->
+        <!-- /.social-auth-links -->
+        <p class="mb-1">
+          <a href="#">I forgot my password</a>
+        </p>
+        <p class="mb-0">
+          <a href="#" class="text-center">Register a new membership</a>
+        </p>
       </div>
-      <!-- /.content-wrapper -->
-
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="plugins/chart.js/Chart.min.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<!-- Page specific script -->
-
-      <script>
-        $(function () {
-
-
-          //--------------
-          //- AREA CHART -
-          //--------------
-
-          var areaChartData = {
-            labels: ['Term 1/2018', 'Term 2/2018', 'Term 1/2019', 'Term 2/2019'],
-            datasets: [
-              {
-                label: 'Digital Goods',
-                backgroundColor: 'rgba(60,141,188,0.9)',
-                borderColor: 'rgba(60,141,188,0.8)',
-                pointRadius: false,
-                pointColor: '#3b8bba',
-                pointStrokeColor: 'rgba(60,141,188,1)',
-                pointHighlightFill: '#fff',
-                pointHighlightStroke: 'rgba(60,141,188,1)',
-                data: [3.00, 1.91, 2.39, 3.00,]
-              },
-            ]
-          }
-
-          var areaChartOptions = {
-            maintainAspectRatio: false,
-            responsive: true,
-            legend: {
-              display: false
-            },
-            scales: {
-              xAxes: [{
-                gridLines: {
-                  display: false,
-                }
-              }],
-              yAxes: [{
-                gridLines: {
-                  display: false,
-                }
-              }]
-            }
-          }
-
-          //-------------
-          //- LINE CHART -
-          //--------------
-          var lineChartCanvas = $('#lineChart').get(0).getContext('2d')
-          var lineChartOptions = $.extend(true, {}, areaChartOptions)
-          var lineChartData = $.extend(true, {}, areaChartData)
-          lineChartData.datasets[0].fill = false;
-          lineChartOptions.datasetFill = false
-
-          var lineChart = new Chart(lineChartCanvas, {
-            type: 'line',
-            data: lineChartData,
-            options: lineChartOptions
-          })
-
-          //-------------
-          //- DONUT CHART -
-          //-------------
-          // Get context with jQuery - using jQuery's .get() method.
-          var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
-          var donutData = {
-            labels: [
-              'เรียน',
-              'เล่นเกม',
-              'ออกกำลังกาย',
-              'พักผ่อน(นอนหลับ)',
-              'อ่านหนังสือ',            
-            ],
-            datasets: [
-              {
-                data: [30, 20, 15, 30, 5,],
-                backgroundColor: ['#ffc107', '#dc3545', '#6f42c1', '#007bff', '#28a745', '#e83e8c','silver'],
-              }
-            ]
-          }
-          var donutOptions = {
-            maintainAspectRatio: false,
-            responsive: true,
-          }
-          //Create pie or douhnut chart
-          // You can switch between pie and douhnut using the method below.
-          var donutChart = new Chart(donutChartCanvas, {
-            type: 'doughnut',
-            data: donutData,
-            options: donutOptions
-          })
-          //-------------
-    //- PIE CHART -
-    //-------------
-    // Get context with jQuery - using jQuery's .get() method.
-    var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
-    var pieData        = {
-            labels: [
-              'Facebook',
-              'Youtube',
-              'Twitch',
-            ],
-            datasets: [
-              {
-                data: [40, 30, 30],
-                backgroundColor: ['royalblue', 'lime', 'cadetblue', 'red'],
-              }
-            ]
-          }
-    var pieOptions     = {
-      maintainAspectRatio : false,
-      responsive : true,
-    }
-    //Create pie or douhnut chart
-    // You can switch between pie and douhnut using the method below.
-    var pieChart = new Chart(pieChartCanvas, {
-      type: 'pie',
-      data: pieData,
-      options: pieOptions
-    })
-
-        })
-      </script>
-
+      <!-- /.login-card-body -->
+    </div>
+  </div>
+  <!-- /.login-box -->
+  <!-- jQuery -->
+  <script src="dist/js/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="dist/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.min.js"></script>
 </body>
-
 </html>
