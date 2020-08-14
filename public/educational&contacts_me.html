@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-sScale=1">
-  <title>Information</title>
+  <title>Educational & Contacts Me</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet"
@@ -130,12 +130,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-deeppink">My Information</h1>
+              <h1 class="m-0 text-deeppink">My Graph</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">Information</li>
+                <li class="breadcrumb-item active">Educational & Contacts Me</li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -268,73 +268,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
           </div><!-- /.container-fluid -->
-          <!-- กราฟ gpa ทุกเทอม -->
-          <!-- LINE CHART -->
-          <div class="card card-info">
-            <div class="card-header">
-              <h3 class="card-title">Grade Point Average : GPA</h3>
 
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                  <i class="fas fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove"></button>
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="chart">
-                <canvas id="lineChart"
-                  style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-              </div>
-            </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
-
-          <!-- กราฟ skill ความสามารถในด้านต่างๆ -->
-          <!-- DONUT CHART -->
-          <div class="card card-danger">
-            <div class="card-header">
-              <h3 class="card-title">Daily Routine</h3>
-
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                  <i class="fas fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-            <div class="card-body">
-              <canvas id="donutChart"
-                style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-            </div>
-
-             <!-- PIE CHART -->
-             <div class="card card-lime">
-              <div class="card-header">
-                <h3 class="card-title">Social media</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="card-body">
-                <canvas id="pieChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
+    
 
           
         </div>
@@ -353,130 +288,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <!-- Page specific script -->
-
-      <script>
-        $(function () {
-
-
-          //--------------
-          //- AREA CHART -
-          //--------------
-
-          var areaChartData = {
-            labels: ['Term 1/2018', 'Term 2/2018', 'Term 1/2019', 'Term 2/2019'],
-            datasets: [
-              {
-                label: 'Digital Goods',
-                backgroundColor: 'rgba(60,141,188,0.9)',
-                borderColor: 'rgba(60,141,188,0.8)',
-                pointRadius: false,
-                pointColor: '#3b8bba',
-                pointStrokeColor: 'rgba(60,141,188,1)',
-                pointHighlightFill: '#fff',
-                pointHighlightStroke: 'rgba(60,141,188,1)',
-                data: [3.00, 1.91, 2.39, 3.00,]
-              },
-            ]
-          }
-
-          var areaChartOptions = {
-            maintainAspectRatio: false,
-            responsive: true,
-            legend: {
-              display: false
-            },
-            scales: {
-              xAxes: [{
-                gridLines: {
-                  display: false,
-                }
-              }],
-              yAxes: [{
-                gridLines: {
-                  display: false,
-                }
-              }]
-            }
-          }
-
-          //-------------
-          //- LINE CHART -
-          //--------------
-          var lineChartCanvas = $('#lineChart').get(0).getContext('2d')
-          var lineChartOptions = $.extend(true, {}, areaChartOptions)
-          var lineChartData = $.extend(true, {}, areaChartData)
-          lineChartData.datasets[0].fill = false;
-          lineChartOptions.datasetFill = false
-
-          var lineChart = new Chart(lineChartCanvas, {
-            type: 'line',
-            data: lineChartData,
-            options: lineChartOptions
-          })
-
-          //-------------
-          //- DONUT CHART -
-          //-------------
-          // Get context with jQuery - using jQuery's .get() method.
-          var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
-          var donutData = {
-            labels: [
-              'เรียน',
-              'เล่นเกม',
-              'ออกกำลังกาย',
-              'พักผ่อน(นอนหลับ)',
-              'อ่านหนังสือ',            
-            ],
-            datasets: [
-              {
-                data: [30, 20, 15, 30, 5,],
-                backgroundColor: ['#ffc107', '#dc3545', '#6f42c1', '#007bff', '#28a745', '#e83e8c','silver'],
-              }
-            ]
-          }
-          var donutOptions = {
-            maintainAspectRatio: false,
-            responsive: true,
-          }
-          //Create pie or douhnut chart
-          // You can switch between pie and douhnut using the method below.
-          var donutChart = new Chart(donutChartCanvas, {
-            type: 'doughnut',
-            data: donutData,
-            options: donutOptions
-          })
-          //-------------
-    //- PIE CHART -
-    //-------------
-    // Get context with jQuery - using jQuery's .get() method.
-    var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
-    var pieData        = {
-            labels: [
-              'Facebook',
-              'Youtube',
-              'Twitch',
-            ],
-            datasets: [
-              {
-                data: [40, 30, 30],
-                backgroundColor: ['royalblue', 'lime', 'cadetblue', 'red'],
-              }
-            ]
-          }
-    var pieOptions     = {
-      maintainAspectRatio : false,
-      responsive : true,
-    }
-    //Create pie or douhnut chart
-    // You can switch between pie and douhnut using the method below.
-    var pieChart = new Chart(pieChartCanvas, {
-      type: 'pie',
-      data: pieData,
-      options: pieOptions
-    })
-
-        })
-      </script>
 
 </body>
 
